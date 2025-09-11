@@ -1,10 +1,21 @@
 header{
-    background-color: rgb(223, 205, 255);
-    height: 120px;
-    width: 1270px;
-    
-    
-}
-main{
-    background-color: rgba(226, 217, 43, 0.411);
-}
+    background-image: url("../img/Fondologo.png");
+    height: 170px;
+    width: 1280px;  
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    height: 150px; }
+.fondo{    
+    width: 260px; }
+body{
+    margin: 0;
+    height: 100vh;
+    background: radial-gradient(circle, #f5e6e6, #e6cfcf, #c7a6a6); }
+.iniciar{
+    font-size: 25px;
+    color: transparent; }
+li a{
+    color: #800000;
+    text-decoration: none;
+    margin-left: 0px; }
