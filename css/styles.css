@@ -1,7 +1,7 @@
 header{
     background-image: url("../img/Fondologo.png");
     height: 170px;
-    width: 1265px;  
+    width: 100%;  
     display: flex;
     justify-content: center;
     align-items: center; 
@@ -33,7 +33,11 @@ li a{
     margin: 0 auto;
     box-sizing: border-box;
     display: flex;
-    justify-content: center; }
+    justify-content:flex-start;
+    text-align: center; 
+    font-size: 20px;
+    flex-direction: column;
+}
 
 .ingreso{
     font-size: 20px;
