@@ -1,7 +1,7 @@
 header{
     background-image: url("../img/Fondologo.png");
     height: 170px;
-    width: 1280px;  
+    width: 1265px;  
     display: flex;
     justify-content: center;
     align-items: center; 
@@ -19,3 +19,22 @@ li a{
     color: #800000;
     text-decoration: none;
     margin-left: 0px; }
+
+.login{
+    display: flex;
+    gap: 15px; }
+
+.caja1{
+    background-color: rgba(165, 42, 42, 0.325);
+    width: 300px;
+    height: 300px;
+    padding: 12px;
+    border: solid black;
+    margin: 0 auto;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center; }
+
+.ingreso{
+    font-size: 20px;
+}
