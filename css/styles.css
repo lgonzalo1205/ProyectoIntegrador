@@ -7,7 +7,11 @@ header{
     align-items: center; 
     height: 150px; }
 .fondo{    
-    width: 260px; }
+    width: 260px;
+   margin-right:150px;
+        
+    
+ }
 body{
     margin: 0;
     height: 100vh;
@@ -17,7 +21,7 @@ body{
     font-size: 25px;
     color: transparent; }
 li a{
-    color: #800000;
+    color: rgba(240, 230, 140, 0.664);
     text-decoration: none;
     margin-left: 0px; }
 
@@ -65,5 +69,14 @@ justify-content: space-between;
 
 }
 .barato{
-  max-width: 10px; 
+  width: 100PX;
+  height: 250px;
+  
 }
+.nav-catalogo{
+    border: solid 1px black;
+    display: flex;
+    justify-content:space-between;
+}
+
+

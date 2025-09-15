@@ -7,19 +7,27 @@
     <title> CATALOGO DE PRODUCTOS </title>
 </head>
 <body>
-    <header>
-<a href="./Paginaprincipal.html">
-    <img class= "fondo" src="img/Logo.png"  alt="Ir a la Pagina principal"> 
-</a>
-
-</header>
+   <header>
+        <nav class="iniciar">
+        <ul class="login"> 
+            <li class="log"> <a href="./login.html"> Iniciar Sesion</a></li>
+            <li class="reg"> <a href="register.html"> Registrarse</a></li>
+        </ul>
+    </nav>
+        <a href="./index.html">
+            <img class="fondo" src="img/Logo.png" alt="Ir a la Pagina principal">
+        </a>
+    
+        <form class="forma" action="./search-results.html">
+    <input type="text" name="Resultados" placeholder="Buscar..." class="forma1">
+    </header>
 <div class="caja1">
     <h2>Inicio de Sesion</h2>
     
     <form action="./index.html" method="get">
     <div>
         <label for="nombre">Email</label>
-        <input type="text" id="user">
+        <input required id="Email" type="email" name="Email" value="">
     
         <label for="pass">Contraseña</label>
         <input type="password" id="password">
