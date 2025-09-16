@@ -89,14 +89,23 @@ max-width: 1200px;
     margin: 32px auto;
     padding: 16px 20px 24px;
     border: 2px solid;
-    border-radius: 12px;
+    border-radius: 14px;
     background-color: cornsilk;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, .12);
 }
 
+.cuadro-lateral{
+    width: 280px;
+    padding: 16px 18px;
+    margin: 24px 16px;
+    position: sticky;top: 24px;
+}
 .cuadro h2{
     margin: 0 0 16px 0;
     font-size: 22px;
     font font-weight: 700;
     text-align: center;
     color: #7B1E1E;
+}
+}
 }
