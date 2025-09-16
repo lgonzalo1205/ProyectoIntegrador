@@ -21,7 +21,7 @@ body{
     font-size: 25px;
     color: transparent; }
 li a{
-    color: rgba(240, 230, 140, 0.664);
+    color: rgba(207, 171, 171, 0.664);
     text-decoration: none;
     margin-left: 0px; }
 
@@ -86,26 +86,60 @@ max-width: 1200px;
 
 .cuadro{
     max-width: 1200px;
-    margin: 32px auto;
+    margin: 32px;
     padding: 16px 20px 24px;
     border: 2px solid;
     border-radius: 14px;
-    background-color: cornsilk;
+    background-color: rgba(165, 42, 42, 0.325);
     box-shadow: 0 8px 24px rgba(0, 0, 0, .12);
+    
 }
 
 .cuadro-lateral{
     width: 280px;
     padding: 16px 18px;
     margin: 24px 16px;
-    position: sticky;top: 24px;
+ 
 }
-.cuadro h2{
+.vendidos{
     margin: 0 0 16px 0;
-    font-size: 22px;
-    font font-weight: 700;
+    font-size: 30px;
+    font-weight: 700;
     text-align: center;
     color: #7B1E1E;
 }
+
+.cuadro2{
+    max-width: 1200px;
+    margin: 32px;
+    padding: 16px 20px 24px;
+    border: 2px solid;
+    border-radius: 14px;
+    background-color: rgba(165, 42, 42, 0.325);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, .12);}
+
+.seccion2{
+display: grid;
+grid-template-columns: repeat(5, 1fr);
+gap: 24px;
+align-items: end;
+justify-content: center;
+margin: 24px auto;
+max-width: 1200px;}
+
+.caro{
+     width: 200PX;
+     height: 300px;}
+
+.aleatorios{
+     margin: 0 0 16px 0;
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+    color: #7B1E1E;
 }
+.texto{
+    text-align: center;
+    color: #7B1E1E;
+    font-size: 20px;
 }
