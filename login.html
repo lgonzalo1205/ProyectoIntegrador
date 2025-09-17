@@ -7,44 +7,42 @@
     <title> CATALOGO DE PRODUCTOS </title>
 </head>
 <body>
-   <header>
+
+    <header>
         <nav class="iniciar">
-        <ul class="login"> 
-            <li class="log"> <a href="./login.html"> Iniciar Sesion</a></li>
-            <li class="reg"> <a href="register.html"> Registrarse</a></li>
-        </ul>
-    </nav>
+            <ul class="login"> 
+                <li class="log"> <a href="./login.html"> Iniciar Sesion</a></li>
+                <li class="reg"> <a href="register.html"> Registrarse</a></li>
+            </ul>
+        </nav>
         <a href="./index.html">
             <img class="fondo" src="img/Logo.png" alt="Ir a la Pagina principal">
         </a>
-    
         <form class="forma" action="./search-results.html">
-    <input type="text" name="Resultados" placeholder="Buscar..." class="forma1">
+            <input type="text" name="Resultados" placeholder="Buscar..." class="forma1">
+        </form>
     </header>
-<div class="caja1">
-    <h2>Inicio de Sesion</h2>
-    
-    <form action="./index.html" method="get">
-    <div>
-        <label for="nombre">Email</label>
-        <input required id="Email" type="email" name="Email" value="">
-    
-        <label for="pass">Contraseña</label>
-        <input required id= password type="password" id="password">
+
+    <div class="caja1">
+        <h2>Inicio de Sesion</h2>
+        <form action="./index.html" method="get">
+            <div>
+                <label for="Email">Email</label>
+                <input required id="Email" type="email" name="Email" value="">
+            </div>
+            <div>
+                <label for="password">Contraseña</label>
+                <input required id="password" type="password" name="password">
+            </div>
+            <div class="ingreso">
+                <button type="submit">Ingresar</button>
+                <button type="submit">No tengo cuenta</button>
+            </div>
+        </form>
     </div>
-    <div class="ingreso">
-        <a href="./index.html"></a>
-        <button type="submit"> Ingresar</button>
 
-
-        <button type="submit"> No tengo cuenta</button>
-
-    </div>
-    </form>
-</div>
-<footer>
-
-</footer>
+    <footer>
+    </footer>
 
 </body>
 </html>

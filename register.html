@@ -9,39 +9,42 @@
 <body>
     <header>
         <nav class="iniciar">
-        <ul class="login"> 
-            <li class="log"> <a href="./login.html"> Iniciar Sesion</a></li>
-            <li class="reg"> <a href="register.html"> Registrarse</a></li>
-        </ul>
-    </nav>
+            <ul class="login"> 
+                <li class="log"> <a href="./login.html"> Iniciar Sesion</a></li>
+                <li class="reg"> <a href="register.html"> Registrarse</a></li>
+            </ul>
+        </nav>
         <a href="./index.html">
             <img class="fondo" src="img/Logo.png" alt="Ir a la Pagina principal">
         </a>
-    
         <form class="forma" action="./search-results.html">
-    <input type="text" name="Resultados" placeholder="Buscar..." class="forma1">
+            <input type="text" name="Resultados" placeholder="Buscar..." class="forma1">
+        </form>
     </header>
-<main>
-    <form action="./index.html" method="get">
-    <div class="caja2">
-           <div>
-        <label for="nombre">Email</label>
-        <input required id="Email" type="email" name="Email" value="">
-    </div>
-    <div>
-        <label for="pass">Contraseña</label>
-        <input required id= password type="password" id="password">
-    </div>
-    <div>
-        <label for="pass">Repetir Contraseña</label>
-        <input required id= password type="password" id="password">
-    </div>
-    <div>
-        <a href="./index.html"></a>
-        <button type="submit"> Registrarme</button>
-    </div>
-    </div>
-  </form>
-</main>
+
+    <main>
+        <form action="./index.html" method="get">
+            <div class="caja2">
+                <div>
+                    <label for="Email">Email</label>
+                    <input required id="Email" type="email" name="Email" value="">
+                </div>
+                <div>
+                    <label for="password">Contraseña</label>
+                    <input required id="password" type="password" name="password">
+                </div>
+                <div>
+                    <label for="password2">Repetir Contraseña</label>
+                    <input required id="password2" type="password" name="password2">
+                </div>
+                <div class="terminos">
+                    <input type="checkbox" name="terminos" value=""> <span>Acepto Terminos y condiciones</span>
+                </div>
+                <div>
+                    <button type="submit">Registrarme</button>
+                </div>
+            </div>
+        </form>
+    </main>
 </body>
 </html>

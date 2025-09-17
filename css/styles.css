@@ -75,23 +75,6 @@ li a{
     justify-content:space-between;
 }
 
-.cuadro{
-    max-width: 1200px;
-    margin: 32px;
-    padding: 16px 20px 24px;
-    border: 2px solid;
-    border-radius: 14px;
-    background-color: rgba(165, 42, 42, 0.325);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, .12);
-    display: flex;
-    flex-wrap: wrap;
-    gap: 24px;
-    align-items: end;
-    justify-content: space-between;
-    margin: 24px auto;
-    max-width: 700px;
-    
-}
 .cuadro1{
     max-width: 1200px;
     margin: 32px;
@@ -111,10 +94,15 @@ li a{
 
 .cuadro-lateral{
     width: 220px;
-    padding: 0;
-    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: flex-start;
-    
+    min-height: 500px;
+    max-width: 1200px;
+    border-radius: 14px;
+    background-color: rgba(165, 42, 42, 0.325);  
+    border: 2px solid black;
  
 }
 .vendidos{
@@ -163,12 +151,9 @@ li a{
     font-size: 20px;}
 .categorias1{
     text-align: center;
-    text-decoration: none;
-    display: flex;
-    align-self: center;
-    justify-content: center;
     padding: 0;
-    flex-direction: column;
+    margin: 0;
+    list-style: none;
 }
 
 .titulo2{
@@ -176,8 +161,9 @@ li a{
     font-size: 20px;}
 
 .titulo1{
-    border: solid black 2px;
     width: 100%;
+    border-radius: 14px;
+    border: solid black 2px;
     margin: 0;
     text-align: center;
     justify-content: center;
@@ -189,6 +175,13 @@ li {
 
 .main{
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     
+}
+.terminos{
+    border-radius: 10px;
+    color: black;
+    padding: 10px;
+    justify-content: center;
+    margin: 15px;
 }
