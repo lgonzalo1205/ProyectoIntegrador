@@ -9,8 +9,7 @@ header{
 .fondo{    
     width: 260px;
    margin-right:150px;
-        
-    
+
  }
 body{
     margin: 0;
@@ -64,32 +63,39 @@ li a{
 }
 
 .barato{
-  width: 200PX;
-  height: 300px;
-  
+  width: 130PX;
+  height: 200px;
 }
 .nav-catalogo{
     margin-left: 0px;
     border: solid 0px black;
     display: flex;
     justify-content:space-between;
-}
+    }
 
 .cuadro1{
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 32px;
+    padding-left: 100px;
     padding: 16px 20px 24px;
     border: 2px solid;
     border-radius: 14px;
     background-color: rgba(165, 42, 42, 0.325);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, .12);
     display: flex;
     flex-wrap: wrap;
-    gap: 24px;
     align-items: end;
     justify-content: space-between;
     margin: 24px auto;
-    max-width: 700px;
+}
+.cuadro1 img{
+    padding-bottom: 5px;
+    padding-top: 40px;
+    padding-left: 40px;
+
+}
+.cuadro1 a{
+    padding-left: 50px;
+    padding-right: 50px;
 }
 
 .cuadro-lateral{
@@ -98,7 +104,7 @@ li a{
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    min-height: 500px;
+    height: 650px;
     max-width: 1200px;
     border-radius: 14px;
     background-color: rgba(165, 42, 42, 0.325);  
@@ -106,37 +112,43 @@ li a{
  
 }
 .vendidos{
-    margin: 0 0 16px 0;
+   
     font-size: 30px;
-    font-weight: 700;
     text-align: center;
     color: #7B1E1E;
 }
 
 .cuadro2{
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 32px;
+    padding-left: 100px;
     padding: 16px 20px 24px;
     border: 2px solid;
     border-radius: 14px;
     background-color: rgba(165, 42, 42, 0.325);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, .12);
     display: flex;
     flex-wrap: wrap;
-    gap: 24px;
-    align-items: flex-start;
+    align-items: end;
     justify-content: space-between;
     margin: 24px auto;
-    max-width: 700px;
-    max-height: 1000px;
 }
+.cuadro2 img{
+    padding-bottom: 10px;
+    padding-top: 40px;
+    padding-left: 40px;
+
+}
+.cuadro2 a{
+    padding-left: 50px;
+    padding-right: 50px;}
 
 
 
 
 .caro{
-     width: 150PX;
-     height: 250px;}
+     width: 130PX;
+     height: 200px;
+    }
 
 .aleatorios{
      margin: 0 0 16px 0;
@@ -148,7 +160,18 @@ li a{
 .texto{
     text-align: center;
     color: #7B1E1E;
-    font-size: 20px;}
+    font-size: 20px;
+    border:solid black 2px;
+    background-color: #7b1e1e3f;
+}
+.detalles{
+    text-align: center;
+    color: #7B1E1E;
+    font-size: 15px;
+    border: solid black 2px;
+    text-decoration: none;
+    background-color: #7b1e1e3f;
+}
 .categorias1{
     text-align: center;
     padding: 0;
@@ -158,7 +181,8 @@ li a{
 
 .titulo2{
     text-align: center;
-    font-size: 20px;}
+    font-size: 20px;
+}
 
 .titulo1{
     width: 100%;
@@ -167,17 +191,18 @@ li a{
     margin: 0;
     text-align: center;
     justify-content: center;
+    background-color:  rgba(123, 18, 18, 0.325);
 }
 
 li {
     list-style-type: none;
-    font-size: 20px; }
-
+    font-size: 20px;
+ }
 .main{
     display: flex;
-    flex-wrap: nowrap;
-    
 }
+ 
+
 .terminos{
     border-radius: 10px;
     color: black;
