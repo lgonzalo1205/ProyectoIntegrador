@@ -210,3 +210,15 @@ li {
     justify-content: center;
     margin: 15px;
 }
+
+.producto {
+    display: flex;
+   
+}
+.img_desc {
+    width:500px;
+    height: 500px;
+}
+.texto1 {
+    justify-content: center;
+}
