@@ -8,7 +8,7 @@ header{
     height: 150px; }
 .fondo{    
     width: 260px;
-   margin-right:150px;
+   margin-right: 100px;
 
  }
 body{
@@ -18,15 +18,20 @@ body{
 
 .iniciar{
     font-size: 25px;
-    color: transparent; }
+    color: transparent;
+    
+ }
 li a{
     color: rgba(207, 171, 171, 0.664);
     text-decoration: none;
-    margin-left: 0px; }
+}
+
 
 .login{
     display: flex;
-    gap: 15px; }
+    gap: 15px;   
+
+ }
 
 .caja1{
     background-color: rgba(165, 42, 42, 0.325);
@@ -75,8 +80,6 @@ li a{
 
 .cuadro1{
     max-width: 1000px;
-    margin: 32px;
-    padding-left: 100px;
     padding: 16px 20px 24px;
     border: 2px solid;
     border-radius: 14px;
@@ -164,7 +167,25 @@ li a{
     border:solid black 2px;
     background-color: #7b1e1e3f;
 }
+
+.texto12{
+    text-align: center;
+    color: #7B1E1E;
+    font-size: 20px;
+    border:solid black 2px;
+    background-color: #7b1e1e3f;
+    margin-top: 0;
+}
 .detalles{
+    text-align: center;
+    color: #7B1E1E;
+    font-size: 15px;
+    border: solid black 2px;
+    text-decoration: none;
+    background-color: #7b1e1e3f;
+}
+
+.detalles2{
     text-align: center;
     color: #7B1E1E;
     font-size: 15px;
@@ -201,8 +222,6 @@ li {
 .main{
     display: flex;
 }
- 
-
 .terminos{
     border-radius: 10px;
     color: black;
@@ -210,15 +229,18 @@ li {
     justify-content: center;
     margin: 15px;
 }
-
-.producto {
+.producto1{
+    width: 300PX;
+    height: 400px;
     display: flex;
-   
-}
-.img_desc {
-    width:500px;
-    height: 500px;
-}
-.texto1 {
     justify-content: center;
+    align-items: center;
+    margin-left: 475px;
+    background-image: url();
+
+}
+.productfondo{
+    background-image: url("../img/fondo5.png") ;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
