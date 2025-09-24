@@ -9,37 +9,42 @@
 <body>
 
     <header>
-        <nav class="iniciar">
-            <ul class="login"> 
-                <li class="log"> <a href="./login.html"> Iniciar Sesion</a></li>
-                <li class="reg"> <a href="register.html"> Registrarse</a></li>
-            </ul>
-        </nav>
+    <nav class="iniciar">
+        <ul class="login"> 
+            <li class="log"> <a href="./login.html"> Iniciar Sesion</a></li>
+            <li class="reg"> <a href="register.html"> Registrarse</a></li>
+        </ul>
+    </nav>
         <a href="./index.html">
             <img class="fondo" src="img/Logo.png" alt="Ir a la Pagina principal">
         </a>
+    
         <form class="forma" action="./search-results.html">
-            <input type="text" name="Resultados" placeholder="Buscar..." class="forma1">
-        </form>
+    <input type="text" name="Resultados" placeholder="Buscar..." class="forma1">
+    <button type="submit" class="botton-buscar">Buscar</button>
     </header>
 
-    <div class="caja1">
-        <h2>Inicio de Sesion</h2>
+    <main>
         <form action="./index.html" method="get">
-            <div>
-                <label for="Email">Email</label>
-                <input required id="Email" type="email" name="Email" value="">
-            </div>
-            <div>
-                <label for="password">Contraseña</label>
-                <input required id="password" type="password" name="password">
-            </div>
-            <div class="ingreso">
-                <button type="submit">Ingresar</button>
-                <button type="submit">No tengo cuenta</button>
-            </div>
+            <div class="caja2">
+                <div>
+                    <label for="Email">Email/Usuario</label>
+                    <input required id="Email" type="email" name="Email" value="">
+                </div>
+                <div>
+                    <label for="password">Contraseña</label>
+                    <input required id="password" type="password" name="password">
+                </div>
+                
+                <div>
+                    <button type="submit">Iniciar Sesion </button>
+                </div>
+                <div>
+                    <button type="submit">No tengo cuenta </button>
+                </div>
+            </div>  
         </form>
-    </div>
+    </main>
 
     <footer>
     </footer>
