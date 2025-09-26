@@ -7,48 +7,58 @@
     <title>Registrarse</title>
 </head>
 <body>
-    <header>
-    <nav class="iniciar">
-        <ul class="login"> 
-            <li class="log"> <a href="./login.html"> Iniciar Sesion</a></li>
-            <li class="reg"> <a href="register.html"> Registrarse</a></li>
-        </ul>
-    </nav>
-        <a href="./index.html">
-            <img class="fondo" src="img/Logo.png" alt="Ir a la Pagina principal">
-        </a>
-    
-        <form class="forma" action="./search-results.html">
-    <input type="text" name="Resultados" placeholder="Buscar..." class="forma1">
-    <button type="submit" class="botton-buscar">Buscar</button>
+     <header>
+        <nav class="iniciar">
+            <ul class="login"> 
+                <li class="log"> <a href="./login.html"> Iniciar Sesion</a></li>
+                <li class="reg"> <a href="./register.html"> Registrarse</a></li>
+            </ul>
+        </nav>
+            <a href="./index.html">
+                <img class="fondo" src="./img/Logo.png" alt="Ir a la Pagina principal">
+            </a>
+        
+        <form class="forma" action="./search-results.html" method="get">
+            <input type="text" name="Resultados" placeholder="Buscar..." class="forma1" value="">
+            <button type="submit" class="botton-buscar">Buscar</button>
     </header>
 
     <main>
         <form action="./index.html" method="get">
+            <p class="inicio2"> Registrarse</p>
             <div class="caja2">
+                <div class="iniciarsesion2">
+                    <label for="Email">Email/Usuario</label>
+                </div>
                 <div>
-                    <label for="Email">Email</label>
                     <input required id="Email" type="email" name="Email" value="">
                 </div>
-                <div>
+                <div class="iniciarsesion2">
                     <label for="password">Contraseña</label>
+                </div>
+                <div>
                     <input required id="password" type="password" name="password">
                 </div>
-                <div>
-                    <label for="password2">Repetir Contraseña</label>
-                    <input required id="password2" type="password" name="password2">
+                
+                <div class="iniciarsesion2">
+                    <label for="password"> Repetir contraseña</label>
                 </div>
+                <div>
+                    <input required id="password" type="password" name="password">
+                </div>
+                
                 <div class="terminos">
                     <input type="checkbox" required name="terminos" value=""> <span>Acepto Terminos y condiciones</span>
                 </div>
                 <div>
-                    <button type="submit">Registrarme</button>
+                    <button class="iniciarsesion" type="submit">Registrarse</button>
                 </div>
                 <div>
-                    <button type="submit">Ya Tengo una cuenta <a href="./login.html"></a></button>
+                    <button class="iniciarsesion" type="submit">Ya tengo una cuenta </button>
                 </div>
             </div>
         </form>
-    </main>
+    <main>
+        
 </body>
 </html>

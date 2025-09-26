@@ -1,3 +1,8 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 header{
     background-image: url("../img/Fondologo.png");
     height: 170px;
@@ -38,21 +43,34 @@ li a{
 .caja2{
     background-color: rgba(165, 42, 42, 0.325);
     width: 375px;
-    height: 300px;
+    height: 330px;
     padding: 12px;
     border: solid black;
     margin: 0 auto;
     display: flex;
     justify-content:flex-start;
-    padding-top: 50px;
+    padding-top: 20px;
     font-size: 20px;
     text-align: center;
     flex-direction: column;
 }
+.inicio2{
+    font-size: 30px;
+    text-align: center;
+    background-color: #300b0b;
+    color:#fff;
+}
+.iniciarsesion{
+    font-size: 16px;
+    margin-top: 10px;
+}
+.iniciarsesion2 label{
+    font-size: 25px;
+}
 
 .barato{
-  width: 130PX;
-  height: 200px;
+     width: 180PX;
+     height: 230px;
 }
 .barato2{
     width: 170PX;
@@ -67,7 +85,9 @@ li a{
     }
 
 .cuadro1{
-    max-width: 1000px;
+    max-width: 1200px;
+    margin: 32px;
+    padding-left: 100px;
     padding: 16px 20px 24px;
     border: 2px solid;
     border-radius: 14px;
@@ -79,9 +99,9 @@ li a{
     margin: 24px auto;
 }
 .cuadro1 img{
-    padding-bottom: 5px;
+    padding-bottom: 10px;
     padding-top: 40px;
-    padding-left: 40px;
+    padding-left: 30px;
 
 }
 .cuadro1 a{
@@ -89,19 +109,21 @@ li a{
     padding-right: 50px;
 }
 
+
 .cuadro-lateral{
-    width: 220px;
+    width: 250px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    height: 600px;
+    height: 805px;
     max-width: 1200px;
     border-radius: 14px;
     background-color: rgba(165, 42, 42, 0.325);  
     border: 2px solid black;
  
 }
+
 .vendidos{
    
     font-size: 30px;
@@ -110,7 +132,7 @@ li a{
 }
 
 .cuadro2{
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 32px;
     padding-left: 100px;
     padding: 16px 20px 24px;
@@ -126,7 +148,7 @@ li a{
 .cuadro2 img{
     padding-bottom: 10px;
     padding-top: 40px;
-    padding-left: 40px;
+    padding-left: 30px;
 
 }
 .cuadro2 a{
@@ -135,8 +157,8 @@ li a{
 
 
 .caro{
-     width: 130PX;
-     height: 200px;
+     width: 180PX;
+     height: 230px;
     }
 
 .aleatorios{
@@ -158,16 +180,19 @@ li a{
     text-align: center;
     color: #7B1E1E;
     font-size: 20px;
-    border:solid black 2px;
+    border:solid black 3px;
+    border-radius: 18px;
     background-color: rgba(173, 126, 126, 0.247);
     margin-top: 0;
     padding: 10px;
     font-weight: bold;
+    margin-top: 5px;
 }
 .detalles{
     text-align: center;
     color: #7B1E1E;
     font-size: 15px;
+    justify-content: center;
     border: solid black 2px;
     text-decoration: none;
     background-color: #7b1e1e3f;
@@ -176,22 +201,42 @@ li a{
 .detalles2{
     text-align: center;
     color: #7B1E1E;
-    font-size: 15px;
+    font-size: 18px;
     border: solid black 2px;
     text-decoration: none;
     background-color: #7b1e1e3f;
     margin-top: 40px;
 }
+.detalles2 {
+    text-align: center;
+    color: #7B1E1E;
+    font-size: 18px;
+    border: solid black 2px;
+    text-decoration: none;
+    background-color: #7b1e1e3f;
+    margin-top: 40px;
+}
+
+
+
+
 .categorias1{
     text-align: center;
-    padding: 0;
     margin: 0;
+    padding: 0;
     list-style: none;
+}
+.categorias1 li{
+    padding-bottom: 5px;
+    font-weight: bold;
+    padding-top: 5px;
 }
 
 .titulo2{
     text-align: center;
-    font-size: 20px;
+    font-size: 24px;
+    margin-left: 4px;
+    margin-right: 4px;
 }
 
 .titulo1{
@@ -215,7 +260,7 @@ li {
     border-radius: 10px;
     color: black;
     padding: 10px;
-    margin: 15px;
+    margin: 10px;
 }
 .producto1{
     width: 300PX;
@@ -223,7 +268,7 @@ li {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 475px;
+    margin-left: 610px;
 
 }
 .productfondo{
@@ -289,6 +334,11 @@ h1 {
     border-radius: 18px;
     border: 2px solid black;
     background-color: rgba(165, 42, 42, 0.325);
+    padding-bottom: 20px;
+    padding-top: 10px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+
 }
 .texto123{
     font-size: 18px;
@@ -296,14 +346,51 @@ h1 {
     color: black;
     font-weight: bold;
 }
-    
+.grid{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
 
 
+@media (max-width: 400px){
+    .barato{
+    width: 120PX;
+    height: 200px;
+    margin-left: 20px;
+    }
+    .texto {
+    color: #7B1E10;
+    font-size: 15px;
+    border: solid black 2px;
+    background-color: #7b1e1e3f;
+}
+    .detalles{
+    font-size: 10px;
+}
 
-
-@media (max-width: 768px){
-    .barato2{
-    width: 170PX;
-    height: 240px;
-    padding-left: 280px;}
+.cuadro-lateral{
+    display: none;
+}
+.caro{
+    width: 120PX;
+    height: 200px;
+    margin-left: 20px;
+    }
+header li a{
+    display: none;
+}
+header input{
+    display: none;
+}
+header button{
+    display: none;
+}
+.producto1{
+    width: 200PX;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 100px; }
 }
