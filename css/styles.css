@@ -67,7 +67,13 @@ li a{
 .iniciarsesion2 label{
     font-size: 25px;
 }
-
+.iniciarsesion3{
+    display: inline-block;
+    background-color:white;
+    color: black;
+    border: solid black 1px;
+    text-decoration: none;
+}
 .barato{
      width: 180PX;
      height: 230px;
@@ -75,7 +81,6 @@ li a{
 .barato2{
     width: 170PX;
     height: 240px;
-    padding-left: 460px;
    }
 .nav-catalogo{
     margin-left: 0px;
@@ -85,7 +90,7 @@ li a{
     }
 
 .cuadro1{
-    max-width: 1200px;
+    max-width: 1500px;
     margin: 32px;
     padding-left: 100px;
     padding: 16px 20px 24px;
@@ -111,13 +116,13 @@ li a{
 
 
 .cuadro-lateral{
-    width: 250px;
+    width: 280px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
     height: 805px;
-    max-width: 1200px;
+    max-width: 1400px;
     border-radius: 14px;
     background-color: rgba(165, 42, 42, 0.325);  
     border: 2px solid black;
@@ -196,6 +201,7 @@ li a{
     border: solid black 2px;
     text-decoration: none;
     background-color: #7b1e1e3f;
+    font-weight: bold;
     }
 
 .detalles2{
@@ -205,9 +211,8 @@ li a{
     border: solid black 2px;
     text-decoration: none;
     background-color: #7b1e1e3f;
-    margin-top: 40px;
 }
-.detalles2 {
+.detalles3 {
     text-align: center;
     color: #7B1E1E;
     font-size: 18px;
@@ -230,6 +235,18 @@ li a{
     padding-bottom: 5px;
     font-weight: bold;
     padding-top: 5px;
+}
+.categorias2{
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.categorias2 li{
+    padding-bottom: 5px;
+    font-weight: bold;
+    padding-top: 5px;
+    font-size: 18px ;
 }
 
 .titulo2{
@@ -268,7 +285,7 @@ li {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 610px;
+    margin-left: 470px;
 
 }
 .productfondo{
@@ -350,6 +367,13 @@ h1 {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+}
+.items{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 350px;
 }
 
 
