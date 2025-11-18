@@ -11,4 +11,5 @@ if (id == ""){
 if (id.length < 3){
     alert("El termino de busqueda debe tener al menos 3 caracteres")
 }
+
 console.log("hoal")
