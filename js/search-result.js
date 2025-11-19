@@ -1,32 +1,120 @@
-let queryString = location.search
-queryStringobject = new URLSearchParams (queryString)
-let id = queryStringobject.get('query')
-if (id == ""){
-    alert("Debe buscar un producto")
-}
- //* 3) Menú de navegación
-//El proyecto mantendrá los dos tipos de navegación presentes en todas las páginas.
-//Navegación superior horizontal: allí se encontrará el logo o nombre del sitio web, 
-// un link "Home” que permite navegar a la página principal, los links de acceso al formulario
-//  de login, de registro y el campo de búsqueda con su correspondiente botón "buscar".
-//Navegación de forma vertical (tipo columna) para acceder a las categorías de producto
-//  detalladas más abajo*. Hacer click en cualquiera de los elementos del menú  
-// debe llevar al detalle de esa categoría (Punto 5). 
-// La información de la “Lista de categorías”debe venir de manera dinámica desde la API.
+
 
 let formularioBusqueda = document.querySelector('.forma');
 let campoBusqueda = document.querySelector('.forma1');
+let mensajeError = document.querySelector('.mensaje-error');
 
 if (formularioBusqueda && campoBusqueda) {
     formularioBusqueda.addEventListener('submit', function (event) {
         let valorBuscado = campoBusqueda.value.trim();
+        if (mensajeError) {
+            mensajeError.innerText = '';
+        }
 
         if (valorBuscado === "") {
-            alert("El campo de búsqueda no puede estar vacío");
             event.preventDefault();
+            if (mensajeError) {
+                mensajeError.innerText = 'El campo de búsqueda no puede estar vacío.';
+            } else {
+                alert('El campo de búsqueda no puede estar vacío.');
+            }
         } else if (valorBuscado.length < 3) {
-            alert("El término buscado debe tener al menos 3 caracteres");
             event.preventDefault();
+            if (mensajeError) {
+                mensajeError.innerText = 'El término buscado debe tener al menos 3 caracteres.';
+            } else {
+                alert('El término buscado debe tener al menos 3 caracteres.');
+            }
         }
     });
+}
+
+let queryString = window.location.search;
+let queryStringObj = new URLSearchParams(queryString);
+
+
+let terminoBuscado = queryStringObj.get('Resultados');
+
+let tituloResultado = document.querySelector('.titulo-resultado');
+let metaResultados = document.querySelector('.Metaa');
+let contenedorResultados = document.querySelector('.resultados-busqueda');
+
+
+if (metaResultados) {
+    metaResultados.innerText = '';
+}
+
+
+if (!terminoBuscado || terminoBuscado.trim() === '') {
+    if (tituloResultado) {
+        tituloResultado.innerText = 'No se ingresó ningún término de búsqueda.';
+    }
+} else if (terminoBuscado.trim().length < 3) {
+    if (tituloResultado) {
+        tituloResultado.innerText = 'El término buscado es demasiado corto.';
+    }
+    if (metaResultados) {
+        metaResultados.innerText = '';
+    }
+    if (mensajeError) {
+        mensajeError.innerText = 'El término buscado debe tener al menos 3 caracteres.';
+    }
+} else {
+
+    if (tituloResultado) {
+        tituloResultado.innerHTML = 'Resultados para: <mark>' + terminoBuscado + '</mark>';
+    }
+
+    fetch('https://dummyjson.com/products/search?q=' + terminoBuscado)
+        .then(function (respuesta) {
+            return respuesta.json();
+        })
+        .then(function (data) {
+
+            let resultados = data.products;
+
+            if (!resultados || resultados.length === 0) {
+                if (metaResultados) {
+                    metaResultados.innerText = 'Mostrando 0 resultados';
+                }
+                if (mensajeError) {
+                    mensajeError.innerText = 'No se encontraron productos para "' + terminoBuscado + '".';
+                }
+                return;
+            }
+
+            let cantidad = resultados.length;
+            if (metaResultados) {
+                metaResultados.innerText = 'Mostrando ' + cantidad + ' resultados';
+            }
+
+            let limite = 10;
+            if (cantidad < limite) {
+                limite = cantidad;
+            }
+
+            let html = '';
+
+            for (let i = 0; i < limite; i++) {
+                let producto = resultados[i];
+
+                html +=
+                    '<div class="items">' +
+                        '<img class="barato2" src="' + producto.thumbnail + '" alt="' + producto.title + '">' +
+                        '<p class="texto">$ ' + producto.price + '</p>' +
+                        '<p class="texto">' + producto.title + '</p>' +
+                        '<a class="detalles2" href="./product.html?id=' + producto.id + '">VER DETALLES</a>' +
+                    '</div>';
+            }
+
+            if (contenedorResultados) {
+                contenedorResultados.innerHTML = html;
+            }
+        })
+        .catch(function (error) {
+            console.log('Error al buscar productos:', error);
+            if (mensajeError) {
+                mensajeError.innerText = 'Ocurrió un error al buscar los productos. Intentá nuevamente.';
+            }
+        });
 }
