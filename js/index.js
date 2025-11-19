@@ -1,46 +1,35 @@
-let formularioBusqueda = document.querySelector('.forma');
+let formularioBusqueda = document.querySelector('#forma');
 let campoBusqueda = document.querySelector('.forma1');
+let categoria = document.querySelector('.categorias1');
+let lista = document.querySelector('.categorias2');
 
-if (formularioBusqueda != null && campoBusqueda != null) {
-    formularioBusqueda.addEventListener('submit', function (e) {
-        let valorBuscado = campoBusqueda.value.trim();
+formularioBusqueda.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (campoBusqueda.value.length < 3 ){
+        return alert("El término buscado debe tener al menos 3 caracteres");
+    }
+    this.submit();
+});
 
-        if (valorBuscado === "") {
-            alert("El campo de búsqueda no puede estar vacío, intente nuevamente");
-            e.preventDefault();
-        } else if (valorBuscado.length < 3) {
-            alert("El término buscado debe tener al menos 3 caracteres, intente nuevamente");
-            e.preventDefault();
+
+
+fetch('https://dummyjson.com/products/categories')
+    .then(function (respuesta) {
+        return respuesta.json();
+    })
+    .then(function (data) {
+        for (let i = 0; i < data.length; i++) {
+            lista.innerHTML += `<li><a href="./category.html?name=${data[i].name}">${data[i].name} </a></li>`;
         }
+    })
+                
+    .catch(function (error) {
+        console.log("Error al traer las categorías", error);
     });
-}
 
 
 
-let listaCategoriasIndex = document.querySelector('.categorias1');
 
-if (listaCategoriasIndex) {
-    fetch('https://dummyjson.com/products/categories')
-        .then(function (respuesta) {
-            return respuesta.json();
-        })
-        .then(function (data) {
-            let contenido = "";
 
-            for (let i = 0; i < data.length; i++) {
-                let categoria = data[i];
 
-                contenido = contenido + '<li>' +
-                    '<a href="./category.html?category=' + categoria.slug + '">' +
-                    categoria.name +
-                    '</a>' +
-                    '</li>';
-            }
-
-            listaCategoriasIndex.innerHTML = contenido;
-        })
-        .catch(function (error) {
-            console.log("Error al traer las categorías", error);
-        });
-}
 

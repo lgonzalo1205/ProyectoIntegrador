@@ -1,19 +1,15 @@
-let formularioBusqueda = document.querySelector('.forma');
+let formularioBusqueda = document.querySelector('#forma');
 let campoBusqueda = document.querySelector('.forma1');
+let categoria = document.querySelector('.categorias1');
 
-if (formularioBusqueda != null && campoBusqueda != null) {
-    formularioBusqueda.addEventListener('submit', function (e) {
-        let valorBuscado = campoBusqueda.value.trim();
+formularioBusqueda.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (campoBusqueda.value.length < 3 ){
+        return alert("El término buscado debe tener al menos 3 caracteres");
+    }
+    this.submit();
+});
 
-        if (valorBuscado === "") {
-            alert("El campo de búsqueda no puede estar vacío");
-            e.preventDefault();
-        } else if (valorBuscado.length < 3) {
-            alert("El término buscado debe tener al menos 3 caracteres");
-            e.preventDefault();
-        }
-    });
-}
 
 let queryString = window.location.search;
 let queryStringObj = new URLSearchParams(queryString);
@@ -31,11 +27,11 @@ if (metaResultados) {
 }
 
 
-if (!terminoBuscado || terminoBuscado.trim() === '') {
+if (!terminoBuscado || terminoBuscado.value === '') {
     if (tituloResultado) {
         tituloResultado.innerText = 'No se ingresó ningún término de búsqueda.';
     }
-} else if (terminoBuscado.trim().length < 3) {
+} else if (terminoBuscado.value().length < 3) {
     if (tituloResultado) {
         tituloResultado.innerText = 'El término buscado es demasiado corto.';
     }
