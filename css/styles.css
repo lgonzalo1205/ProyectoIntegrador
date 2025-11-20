@@ -381,6 +381,27 @@ h1 {
     color: black;
     font-weight: bold;
 }
+
+
+.derechos{
+    width: 320px;
+    border-radius: 4px;
+    border: solid black 2px;
+    background-color: rgba(128, 128, 128, 0.233);
+
+}
+.texto1234{
+    text-align: center;
+    color: #7B1E1E;
+    font-size: 13px;
+    border:solid black 1.5px;
+    border-radius: 18px;
+    background-color: rgba(173, 126, 126, 0.247);
+    margin-top: 0;
+    padding: 10px;
+    font-weight: bold;
+    margin-top: 5px;
+}
 .grid{
     display: flex;
     flex-wrap: wrap;

@@ -83,15 +83,15 @@ function mostrarProducto(producto) {
 
     let html = 
         "<div class='product-details-info'>" +
-            "<p>Marca: " + producto.brand + "</p>" +
-            "<p>Descripción: " + producto.description + "</p>" +
-            "<p>Precio: $ " + producto.price + "</p>" +
-            "<p>Categoría: <a href='./category.html?categoria=" + producto.category + "'>" + producto.category + "</a></p>" +
-            "<p>Stock: " + producto.stock + "</p>" +
-            "<p>Tags: " + tags + "</p>" +
+            "<p class= texto1234> Marca: " + producto.brand + "</p>" +
+            "<p class = texto1234>Descripción: " + producto.description + "</p>" +
+            "<p class = texto1234>Precio: $ " + producto.price + "</p>" +
+            "<p class = texto1234>Categoría: <a href='./category.html?categoria=" + producto.category + "'>" + producto.category + "</a></p>" +
+            "<p class = texto1234>Stock: " + producto.stock + "</p>" +
+            "<p class = texto1234>Tags: " + tags + "</p>" +
         "</div>" +
         "<div class='product-image'>" +
-            "<img src='" + producto.thumbnail + "' alt='" + producto.title + "'>" +
+            "<img class=derechos src='" + producto.thumbnail + "' alt='" + producto.title + "'>" +
         "</div>";
 
     if (productContainer) productContainer.innerHTML = html;

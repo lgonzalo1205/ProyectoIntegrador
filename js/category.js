@@ -20,7 +20,6 @@ fetch('https://dummyjson.com/products/category-list')
     })
     .then(function (data) {
         for (let i = 0; i < data.length; i++) {
-            //listaCategorias.innerHTML += `<li><a href="./category.html">${data[i]} </a></li>`;
             listaCategorias.innerHTML += `<li><a href="./category.html?categoria=${data[i]}">${data[i]}</a></li>`;        }
     })
                 
