@@ -1,38 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/styles.css">
-    <title>Resultados</title>
+    <title>Resultados de búsqueda</title>
 </head>
 <body>
-        <header>
-            <nav class="iniciar">
-                <ul class="login"> 
-                    <li class="log"> <a href="./login.html"> Iniciar Sesion</a></li>
-                    <li class="reg"> <a href="./register.html"> Registrarse</a></li>
-                </ul>
-            </nav>
-                <a href="./index.html">
-                    <img class="fondo" src="./img/Logo.png" alt="Ir a la Pagina principal">
-                </a>
+    <header>
+        <nav class="iniciar">
+            <ul class="login"> 
+                <li class="log"><a href="./login.html">Iniciar Sesión</a></li>
+                <li class="reg"><a href="./register.html">Registrarse</a></li>
+            </ul>
+        </nav>
+        <a href="./index.html">
+            <img class="fondo" src="./img/Logo.png" alt="Ir a la página principal">
+        </a>
+        <form id="form-busqueda" class="forma" action="./search-results.html" method="get">
+            <input 
+                type="text" 
+                name="Resultados" 
+                placeholder="Buscar..." 
+                class="forma1"
+            >
+            <button type="submit" class="botton-buscar">Buscar</button>
+        </form>
+    </header>
 
-            <form class="forma" action="./search-results.html" method="get">
-                <input type="text" name="Resultados" placeholder="Buscar..." class="forma1" value="">
-                <button type="submit" class="botton-buscar">Buscar</button>
-            </form>
-        </header>
     <main>
-            <div class="container">
-        <h1 class="titulo-resultado">Resultados de búsqueda</h1>
-        <p class="Metaa"></p>
-        <p class="mensaje-error"></p>
-        <section class="grid resultados-busqueda">
-        </section>
-    </div>
-    
+        <div class="container">
+            <h1 class="titulo-resultado">Resultados de búsqueda</h1>
+            <p class="Metaa"></p>
+            <p class="mensaje-error"></p>
+            <section class="grid resultados-busqueda">
+            </section>
+        </div>
     </main>
-<script src="./js/search-result.js"></script>
+
+    <script src="./js/search-result.js"></script>
 </body>
 </html>
