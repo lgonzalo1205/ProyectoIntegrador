@@ -78,6 +78,11 @@ li a{
      width: 180PX;
      height: 230px;
 }
+.barato3{
+     width: 180PX;
+     height: 230px;
+     margin-left: 445px;
+}
 .barato2{
     width: 170PX;
     height: 240px;
@@ -128,7 +133,20 @@ li a{
     border: 2px solid black;
  
 }
+.detalle{
+    font-size: 20px;
+    text-align: center;
+    color: #7B1E1E;
+    display: inline-block;
+    margin-top: 4px;
+    margin-bottom: 70px;
+    border-radius: 15px;
+    border: solid black 1px;
+    padding: 5px;
+    font-weight: bold;
+    background-color: rgba(98, 19, 19, 0.247);
 
+}
 .vendidos{
    
     font-size: 30px;

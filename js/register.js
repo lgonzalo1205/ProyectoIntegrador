@@ -1,14 +1,16 @@
-let formularioLogin = document.querySelector('form');
+let formularioLogin = document.querySelector('#formregistro');
     formularioLogin.addEventListener('submit', function (e) {
         let campoEmail = document.querySelector('#Email');
         let campospassword1 = document.querySelector('#password1');
         let campospassword2 = document.querySelector('#password2');
         let checkTerminos = document.querySelector('#terminos');
+         
 
-
-        let email = campoEmail.value();
-        let password1 = campospassword1.value();
-        let password2 = campospassword2.value();
+        let email = campoEmail.value;
+        let password1 = campospassword1.value;
+        let password2 = campospassword2.value;
+        alert(password1);
+        alert(password2);  
 
         if (email === "" || password1 === "" || password2 === "") {
             alert('Todos los campos son obligatorios');

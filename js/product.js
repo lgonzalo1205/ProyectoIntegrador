@@ -1,6 +1,7 @@
 let formularioBusqueda = document.querySelector('.forma');
 let campoBusqueda = document.querySelector('.forma1');
 let categoria = document.querySelector('.categorias1');
+let lista = document.querySelector('.categorias2');
 
 formularioBusqueda.addEventListener('submit', function (e) {
     e.preventDefault();
@@ -30,6 +31,8 @@ fetch('https://dummyjson.com/products/1')
     .catch(function (error) {
         console.log("Error: " + error);
     });
+
+
 
 
     

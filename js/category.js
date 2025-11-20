@@ -36,7 +36,7 @@ let categoria1 = cataobjeto.get("categoria")
 
 
 
-let tituloCategoria = document.querySelector('.titulo-categoria');
+let tituloCategoria = document.querySelector('.titulo_categoria');
 let productos = document.querySelector('.productos');
 
 
@@ -51,33 +51,29 @@ fetch('https://dummyjson.com/products/category/' + categoria1)
         contenido = ""
         for (let i = 0; i < producto.length; i++) {
             contenido += `<article class="producto">
-            <h1 class= "texto123"> ${producto[i].title} </h1>
-            <h3class= "texto123"> Precio: $ ${producto[i].price} </h3>
-            <a class= "texto123" href="./detalle.html?Idproducto=${producto[i].id}"> Ver detalles </a>
+            <h1 class= "texto12"> ${producto[i].title} </h1>
+            <img class= "barato3" src="${producto[i].images[0]}"/>
+            <p class = "texto12"> ${producto[i].description}</p>
+            <h3 class= "texto12"> Precio: $ ${producto[i].price} </h3>
+            <p class = "texto12">  Rating: ${producto[i].rating} </p>
+            <p  class= "texto12"> Categoria: ${producto[i].category} </p>
+            <p  class= "texto12"> Stock: ${producto[i].stock} unidades disponibles </p>
+            <p  class= "texto12"> Marca: ${producto[i].brand} </p>
+            <a class= "detalle" href="./detalle.html?idproducto=${producto[i].id}"> Ver detalles </a>
+
+            
             </article>`
         }
-        productos.innerHTML = contenido;
-    })
-                
-    .catch(function (error) {
-        console.log("Error al traer las categorías", error);
-    });
+       productos.innerHTML = contenido;
 
-
-
-
-
-
-
-
-
-
-
-if(productos.length === 0){
-    tituloCategoria.innerText = `No hay productos en la categoría ${categoria}`;
+if (producto.length === 0) {
+    tituloCategoria.innerText = `No hay productos en la categoría ${categoria1}`;
 } else {
-    tituloCategoria.innerText = `Los productos que estan en: ${categoria}` `son ` + productos.length;
+    tituloCategoria.innerText = `Los productos que están en ${categoria1} son ${producto.length}`;
 }
+    })
+
+        
 
 
 
