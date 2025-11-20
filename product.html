@@ -27,25 +27,32 @@
             <button type="submit" class="botton-buscar">Buscar</button>
         </form>
     </header>
+    <main>
+        <div class="container">
+            <h1 id="titulo-header">Detalle del Producto</h1>
+            <p id="cargando-mensaje">Cargando detalles del producto...</p>
+            <p id="error-mensaje" style="color: red;"></p>
 
-    <section class="productfondo texto123">
-        <div class="reseña">
-            <p class="texto123">Nombre de Usuario: Flecha2002</p>
-            <p class="texto123">Rating: 8,50 </p>
-            <p class="texto123"> Fecha: 18/03/2022 </p>
-            <p class="texto123"> Reseña: "Gran vino, precio calidad excelente." </p>
+            <section id="producto-container" style="display: none;">
+            
+            </section>
+
+            
+
+            <section id="reviews" style="display: none;">
+                <h2>Sección de Reviews</h2>
+                <div id="container-reseña">
+                    </div>
+                <p id="sin-reseña" style="display: none;">Este producto aún no tiene reseñas.</p>
+            </section>
+
+            <a class="detalles3" href="./index.html">VOLVER A PRODUCTOS</a>
         </div>
-        <div class="reseña">
-            <p class="texto123">Nombre de Usuario: Thomas Cook</p>
-            <p class="texto123">Rating: 7,50 </p>
-            <p class="texto123"> Fecha: 18/03/2024 </p>
-            <p class="texto123"> Reseña: "Malbec no desepciona, gran vino, super recomendado." </p>
-        </div>
-             <a class="detalles3" href="./index.html">VOLVER A PRODUCTOS</a>
-        
-    </section>
-    <script src="./js/product.js"></script>
+    </main>
+
+    
     <script src="./js/logout.js"></script>
     <script src="./js/saludo.js" ></script>
+    <script src="./js/product.js"></script>
 </body>
 </html>
