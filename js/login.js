@@ -1,21 +1,28 @@
-let formularioLogin = document.querySelector('main form');
-    formularioLogin.addEventListener('submit', function (e) {
-        let campoEmail = document.querySelector('#Email');
-        let campoPassword = document.querySelector('#password');
 
-        let email = campoEmail.value();
-        let password = campoPassword.value();
+let formularioLogin = document.querySelector('#loginform');
+formularioLogin.addEventListener('submit', function (e) {
+    let campoEmail = document.querySelector('#Email');
+    let campoPassword = document.querySelector('#password');
+    let nombre= localStorage.getItem('usuario');
+    let contraseña=  localStorage.getItem('password');
 
-        if (email === "" || password === "") {
-            alert('Todos los campos son obligatorios');
-            e.preventDefault();
-        } else if (password.length < 6) {
-            alert('La contraseña debe tener al menos 6 caracteres');
-            e.preventDefault();
-        } else {
-            localStorage.setItem('usuario', email);
+    let email = campoEmail.value;
+    let password = campoPassword.value;
 
-            e.preventDefault();
-            location.href = 'index.html';
-        }
-    });
+    if (email === "" || password === "") {
+        alert('Todos los campos son obligatorios');
+        e.preventDefault();
+    } else if (password.length < 6) {
+        alert('La contraseña debe tener al menos 6 caracteres');
+        e.preventDefault();
+
+    } else if (email === nombre && password === contraseña) {
+        alert("Felicidades "+nombre+" has iniciado sesión con éxito!");
+        localStorage.setItem('UsuarioLogueado', "True");
+        location.href = 'index.html';
+    }
+    else {
+        alert('El usuario o la contraseña son incorrectos, intente nuevamente');
+        e.preventDefault();
+    }
+});
