@@ -17,7 +17,6 @@ formularioLogin.addEventListener('submit', function (e) {
         e.preventDefault();
 
     } else if (email === nombre && password === contraseña) {
-        alert("Felicidades "+nombre+" has iniciado sesión con éxito!");
         localStorage.setItem('UsuarioLogueado', "True");
         location.href = 'index.html';
     }
