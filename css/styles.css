@@ -79,9 +79,10 @@ li a{
      height: 230px;
 }
 .barato3{
-     width: 180PX;
+     width: 300PX;
      height: 230px;
-     margin-left: 445px;
+     margin-left: 380px;
+     background-color: rgba(128, 128, 128, 0.271);
 }
 .barato2{
     width: 170PX;
@@ -209,7 +210,6 @@ li a{
     margin-top: 0;
     padding: 10px;
     font-weight: bold;
-    margin-top: 5px;
 }
 .detalles{
     text-align: center;
@@ -381,7 +381,23 @@ h1 {
     color: black;
     font-weight: bold;
 }
+.imagen14{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    height: 270px;
+    
+}
+.clase2000{
+    display: flex;
+    flex-direction: column;
+    margin-bottom:18px ;
+    border: solid black 2px;
+    padding: 10px;
+    border-radius: 20px;
 
+
+}
 
 .derechos{
     width: 320px;
@@ -389,6 +405,13 @@ h1 {
     border: solid black 2px;
     background-color: rgba(128, 128, 128, 0.233);
 
+}
+.derechos1205{
+    width: 320px;
+    border-radius: 4px;
+    border: solid black 2px;
+    background-color: rgba(128, 128, 128, 0.233);
+    margin-top: 10px;
 }
 .texto1234{
     text-align: center;

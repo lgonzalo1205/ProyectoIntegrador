@@ -21,11 +21,12 @@
             <a href="./index.html">
                 <img class="fondo" src="./img/Logo.png" alt="Ir a la Pagina principal">
             </a>
-
-        <form class="forma" action="./search-results.html" method="get">
-            <input type="text" name="Resultados" placeholder="Buscar..." class="forma1" value="">
+        
+            <form id= "forma" class="forma" action="./search-results.html" method="get">
+            <input type="text" name="query" placeholder="Buscar..." class="forma1" value="">
             <button type="submit" class="botton-buscar">Buscar</button>
-        </form>
+            </form>
+
     </header>
     <main>
         <div class="container">
@@ -33,20 +34,20 @@
             <p id="cargando-mensaje">Cargando detalles del producto...</p>
             <p id="error-mensaje" style="color: red;"></p>
 
-            <section id="producto-container" style="display: none;">
+            <section id="producto-container">
             
             </section>
 
             
 
-            <section id="reviews" style="display: none;">
+            <section id="reviews">
                 <h2>Sección de Reviews</h2>
                 <div id="container-reseña">
-                    </div>
+                </div>
                 <p id="sin-reseña" style="display: none;">Este producto aún no tiene reseñas.</p>
             </section>
 
-            <a class="detalles3" href="./index.html">VOLVER A PRODUCTOS</a>
+            <a class="texto1234" href="./index.html">VOLVER A PRODUCTOS</a>
         </div>
     </main>
 

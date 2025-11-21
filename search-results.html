@@ -18,26 +18,24 @@
                 <li id= "reg" class="reg"> <a href="./register.html"> Registrarse</a></li>
             </ul>
         </nav>
-        <a href="./index.html">
-            <img class="fondo" src="./img/Logo.png" alt="Ir a la página principal">
-        </a>
-        <form id="form-busqueda" class="forma" action="./search-results.html" method="get">
-            <input 
-                type="text" 
-                name="Resultados" 
-                placeholder="Buscar..." 
-                class="forma1"
-            >
+            <a href="./index.html">
+                <img class="fondo" src="./img/Logo.png" alt="Ir a la Pagina principal">
+            </a>
+        
+            <form id= "forma" class="forma" action="./search-results.html" method="get">
+            <input type="text" name="query" placeholder="Buscar..." class="forma1" value="">
             <button type="submit" class="botton-buscar">Buscar</button>
-        </form>
+            </form>
+
     </header>
 
     <main>
         <div class="container">
             <h1 class="titulo-resultado">Resultados de búsqueda</h1>
             <p class="Metaa"></p>
+            <p class="cantidad"></p>
             <p class="mensaje-error"></p>
-            <section class="grid resultados-busqueda">
+            <section class="resultados-busqueda">
             </section>
         </div>
     </main>

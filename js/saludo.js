@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
     let contenedor = document.querySelector('#contenedor');
 
 
-    if (UsuarioLogueado === "True" && contenedor) {
+    if (UsuarioLogueado === true) {
         let contenido  = ` 
             <div style="margin-right: 20px;">
                 Bienvenido ${nombreUsuario}

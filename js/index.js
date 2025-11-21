@@ -43,7 +43,7 @@ fetch('https://dummyjson.com/products/category/smartphones?limit=10')
             contenido += `
              <article><img class="barato" src="${data.products[i].thumbnail}" alt="">
                     <p class="texto">${data.products[i].title}</p>
-                    <p class="texto">${data.products[i].price}</p>
+                    <p class="texto"> $${data.products[i].price}</p>
                     <a class="detalles" href="./product.html?id=${data.products[i].id}">VER DETALLES</a>
                     </article>
             `
@@ -64,7 +64,7 @@ fetch('https://dummyjson.com/products/category/smartphones?limit=10')
     });
 
 
-fetch('https://dummyjson.com/products/category/groceries?limit=10')
+fetch('https://dummyjson.com/products/category/sunglasses?limit=10')
     .then(function (respuesta) {
         return respuesta.json();
     })

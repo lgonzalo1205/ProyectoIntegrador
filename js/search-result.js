@@ -1,70 +1,51 @@
-let lista = document.querySelector('.listaCategoria')
-fetch(`https://dummyjson.com/products/categories`)
-    .then(function (response) {
-        return response.json();
-    })
-    .then(function (data) {
-        for (let i = 0; i < data.length; i++) {
-            lista.innerHTML += `<li><a href="./category.html">${data[i].name}</a></li>`
-        }
-    })
-    .catch(function (error) {
-        console.log('Error: ' + error);
+let query = location.search;
+let queryObj = new URLSearchParams(query);
+let busqueda = queryObj.get("query");
+let resultado = document.querySelector(".resultados-busqueda");
+let cantidad = document.querySelector(".Metaa");
+let formularioBusqueda = document.querySelector('#forma');
+let campoBusqueda = document.querySelector('.forma1');
+
+cantidad.innerText = `Se han encontrado los siguientes resultados para: "${busqueda}"`;
+
+formularioBusqueda.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (campoBusqueda.value.length < 3) {
+        return alert("El término buscado debe tener al menos 3 caracteres");
+    }
+    this.submit();
     });
 
-const form = document.querySelector(".search-container");
-const busqueda = document.querySelector(".buscar");
-
-form.addEventListener('submit', function (event){
-    event.preventDefault();
-    if (busqueda.value == '' ) {
-        alert('Este campo no debe estar vacio');
-    } else if (busqueda.value.length < 3 ) {
-        alert('Por favor ingrese al menos 3 caracteres');
-    } else {
-        this.submit();
-    }
+fetch(`https://dummyjson.com/products/search?q=${busqueda}`)
+.then(function (response) {
+    return response.json();
 })
 
-const querystring = location.search;
-const querystringobj = new URLSearchParams(querystring);
-const buscador = querystringobj.get('q');
+.then(function (data){
+    console.log(data);
+     let contenidos = '';
 
-console.log(buscador);
+        for(let i = 0; i < data.products.length; i++) {
+            contenidos += `
+             <article>
+                    <div class='product-details-info'>
+                    <div class='imagen14'>
+                    <img class=derechos1205 src='${data.products[i].thumbnail}' alt=""> 
+                    </div>
 
-const resultado = document.querySelector('.category-title');
-resultado.innerHTML = 'Resultados de búsqueda para: ' + buscador;
-const searchResults = document.querySelector('.product-grid');
+                    <p class="texto1234">${data.products[i].title}</p>
+                    <p class="texto1234"> $${data.products[i].price}</p>
+                     <p class="texto1234"> ${data.products[i].description}</p>
+                     <p>  .         </p>
+                    <a class="texto1234" href="./product.html?id=${data.products[i].id}">VER DETALLES</a>
 
-fetch(`https://dummyjson.com/products/search?q=${buscador}`)
-    .then(function (response) {
-        return response.json();
-    })
-    .then(function (data) {
-        console.log(searchResults);
-        searchResults.innerHTML = "";
-
-        if (!data.products || data.products.length === 0) {
-            searchResults.innerHTML = `
-                <p>No hay resultados para el término: <mark>${buscador}</mark></p>
-            `;
-            return;
+                    </article>
+            `
+            resultado.innerHTML = contenidos;
         }
+})
 
-        for (let i = 0; i < data.products.length; i++) {
-            const prod = data.products[i];
 
-            searchResults.innerHTML += `
-                <article class="resultado-producto">
-                    <img src="${prod.thumbnail}" alt="${prod.title}">
-                    <h3>${prod.title}</h3>
-                    <p>${prod.description}</p>
-                    <p><strong>Precio: $${prod.price}</strong></p>
-                    <a class="btn-detalle" href="./product.html?id=${prod.id}">Ver detalle</a>
-                </article>
-            `;
-        }
-    })
-    .catch(function (error) {
-        console.log('Error: ' + error);
-    });
+
+
+
