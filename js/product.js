@@ -1,12 +1,8 @@
 
-
-// Elementos del HTML
 let productContainer = document.querySelector('#producto-container');
 let reviewsContainer = document.querySelector('#container-reseña');
 let loading = document.querySelector('#cargando-mensaje');
 let errorMsg = document.querySelector('#error-mensaje');
-
-// ------------------ OBTENER ID DESDE LA QUERY ------------------
 
 let query = location.search;
 let productId = null;
@@ -22,20 +18,20 @@ if (productId === "") {
     errorMsg.innerText = "No se encontró ID del producto.";
 } else {
 
-    // ------------------ FETCH DEL PRODUCTO ------------------
+    
 
     fetch("https://dummyjson.com/products/" + productId)
         .then(function(res) {
-            if (loading) loading.style.display = "none"; // Se asegura que loading se oculte
+            if (loading) loading.style.display = "none"; 
             
-            // Manejo de error de respuesta no exitosa (como 404)
+            
             if (!res === res) {
                 alert('Producto no encontrado o error en la red.');
             }
             return res.json();
         })
         .then(function(data) {
-            // CLAVE: Hacer visible el contenedor principal de detalles
+      
             if (productContainer) productContainer.style.display = "flex"; 
             
             mostrarProducto(data);
@@ -43,12 +39,12 @@ if (productId === "") {
         })
         .catch(function(err) {
             if (errorMsg) errorMsg.innerText = "Error al cargar el producto. " + err.message;
-            if (productContainer) productContainer.style.display = "none"; // Asegura que el contenedor principal esté oculto en caso de error
+            if (productContainer) productContainer.style.display = "none"; 
         });
 }
 
 
-// ------------------ BUSCADOR (Sin cambios) ------------------
+
 
 let formBuscador = document.querySelector('.forma');
 let campoBuscador = document.querySelector('.forma1');
@@ -68,11 +64,11 @@ if (formBuscador && campoBuscador) {
     });
 }
 
-// ------------------ MOSTRAR DETALLES (Sin cambios estructurales) ------------------
+
 
 function mostrarProducto(producto) {
 
-    let tituloHeader = document.querySelector("#product-title-header");
+    let tituloHeader = document.querySelector("#titulo-producto");
     if (tituloHeader) tituloHeader.innerText = producto.title;
 
         let tags = "";
@@ -98,7 +94,6 @@ function mostrarProducto(producto) {
 }
 
 
-// ------------------ MOSTRAR REVIEWS ------------------
 
 function mostrarReviews(reviews) {
 
@@ -109,21 +104,17 @@ function mostrarReviews(reviews) {
 
     if (reviews && reviews.length > 0) {
         reviewsSection.style.display = "block";
-        if (noReviews) noReviews.style.display = "none"; // Oculta el mensaje si hay reviews
+        if (noReviews) noReviews.style.display = "none"; 
 
         let html = "";
 
         for (let i = 0; i < reviews.length; i++) {
             let r = reviews[i];
             
-            // Opcional: formatear la fecha si r.date es un string de fecha válido
-            let reviewDate = r.date; 
-            try {
-                // Intenta formatear la fecha
-                reviewDate = r.date
-            } catch (e) {
-                // Si falla, usa la fecha original
-            }
+        
+            let reviewDate = r.date;
+
+            
             
             html += 
                 "<div class='review-item' style='border: 1px solid #ddd; padding: 10px; margin-bottom: 10px; border-radius: 5px;'>" +
@@ -138,7 +129,7 @@ function mostrarReviews(reviews) {
 
     } else {
         reviewsSection.style.display = "block";
-        if (reviewsContainer) reviewsContainer.innerHTML = ''; // Limpia el contenedor si no hay reviews
+        if (reviewsContainer) reviewsContainer.innerHTML = ''; 
         if (noReviews) noReviews.style.display = "block";
     }
 }

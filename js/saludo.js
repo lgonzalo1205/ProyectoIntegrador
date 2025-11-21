@@ -13,8 +13,8 @@ document.addEventListener('DOMContentLoaded', function () {
             <div style="margin-right: 20px;">
                 Bienvenido ${nombreUsuario}
             </div>
-            <span id="logout" style="cursor: pointer; font-weight: bold; color: white; text-decoration: underline;">
-                LOGOUT
+            <span id="logout" >
+                Logout
             </span>`;
 
         contenedor.innerHTML=contenido;

@@ -10,7 +10,7 @@ formularioLogin.addEventListener('submit', function (e) {
     let password = campoPassword.value;
 
     if (email === "" || password === "") {
-        
+        alert('Todos los campos son obligatorios');
         e.preventDefault();
     } else if (password.length < 6) {
         alert('La contraseña debe tener al menos 6 caracteres');

@@ -29,32 +29,6 @@ fetch('https://dummyjson.com/products/categories')
 
 
 
-function renderizarProductos(productos, contenedorSelector) {
-    const contenedor = document.querySelector(contenedorSelector);
-    if (!contenedor) return;
-
-    let contenido = '';
-    
-    
-    const limite = productos.length; 
-
-    for (let i = 0; i < limite; i++) {
-        const producto = productos[i];
-        
-        
-        contenido += '<article>';
-        contenido += '  <img class="barato" src="' + producto.thumbnail + '" alt="' + producto.title + '">';
-        contenido += '  <p class="texto">' + producto.price + '$</p>';
-        contenido += '  <p class="texto">' + producto.title + '</p>';
-        contenido += '  <a class="detalles" href="./product.html?id=' + producto.id + '">VER DETALLES</a>';
-        contenido += '</article>';
-    }
-    contenedor.innerHTML = contenido;
-}
-
-
-
-
 if (lista) {
     fetch('https://dummyjson.com/products/category-list')
         .then(function(respuesta) {
@@ -77,13 +51,18 @@ if (lista) {
 
 
 
+
+
+
+
+
 fetch('https://dummyjson.com/products/category/smartphones?limit=10') 
     .then(function(respuesta) {
         return respuesta.json();
     })
     .then(function(data) {
         
-        renderizarProductos(data.products, '.cuadro1');
+        Productos2(data.products, '.cuadro1');
     })
     .catch(function(error) {
         console.log("Error al traer los smartphones:", error);
@@ -99,7 +78,7 @@ fetch('https://dummyjson.com/products/category/groceries?limit=10')
     })
     .then(function(data) {
 
-        renderizarProductos(data.products, '.cuadro2');
+        Productos2(data.products, '.cuadro2');
     })
     .catch(function(error) {
         console.log("Error al traer las fragancias:", error);
