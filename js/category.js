@@ -52,13 +52,13 @@ fetch('https://dummyjson.com/products/category/' + categoria1)
             contenido += `<article class="producto">
             <h1 class= "texto12"> ${producto[i].title} </h1>
             <img class= "barato3" src="${producto[i].images[0]}"/>
-            <p class = "texto12"> ${producto[i].description}</p>
+            <p class = "texto12"> ${producto[i].description}<   /p>
             <h3 class= "texto12"> Precio: $ ${producto[i].price} </h3>
             <p class = "texto12">  Rating: ${producto[i].rating} </p>
             <p  class= "texto12"> Categoria: ${producto[i].category} </p>
             <p  class= "texto12"> Stock: ${producto[i].stock} unidades disponibles </p>
             <p  class= "texto12"> Marca: ${producto[i].brand} </p>
-            <a class= "detalle" href="./detalle.html?idproducto=${producto[i].id}"> Ver detalles </a>
+            <a class= "detalle" href="./product.html?id=${producto[i].id}"> Ver detalles </a>
 
             
             </article>`
