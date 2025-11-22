@@ -7,7 +7,9 @@ let formularioBusqueda = document.querySelector('#forma');
 let campoBusqueda = document.querySelector('.forma1');
 let lista = document.querySelector('.categorias2');
 
+
 cantidad.innerText = `Se han encontrado los siguientes resultados para: "${busqueda}"`;
+
 
 formularioBusqueda.addEventListener('submit', function (e) {
     e.preventDefault();
