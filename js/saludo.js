@@ -1,30 +1,11 @@
 document.addEventListener('DOMContentLoaded', function () {
-    let nombreUsuario = localStorage.getItem('usuario');
-    let UsuarioLogueado = localStorage.getItem('UsuarioLogueado');
+    let emailUsuario = localStorage.getItem('usuario');
+    let useraction = document.querySelector('.login');
 
-    let cartellogin = document.querySelector('#log');
-    let cartelregistro = document.querySelector('#reg');
-    let headerexsistente = document.querySelector('header');
-    let contenedor = document.querySelector('#contenedor');
-
-
-    if (UsuarioLogueado === true) {
-        let contenido  = ` 
-            <div style="margin-right: 20px;">
-                Bienvenido ${nombreUsuario}
-            </div>
-            <span id="logout" >
-                Logout
-            </span>`;
-
-        contenedor.innerHTML=contenido;
-        const logoutlabel = document.querySelector('#logout');
-        if (logoutlabel) {
-            logoutlabel.addEventListener('click', logout);
-        }
-        cartellogin.style.display = 'none';
-        
-        cartelregistro.style.display = 'none';
+    if (emailUsuario) {
+        useraction.innerHTML=  `
+        <li id=logout ><a href=""></a></li>
+        <li>Bienvenido, ${emailUsuario}</li>
+        `;
     }
-
 });
