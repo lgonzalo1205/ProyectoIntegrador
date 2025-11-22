@@ -1,6 +1,7 @@
 let formularioBusqueda = document.querySelector('.forma');
 let campoBusqueda = document.querySelector('.forma1');
 let categoria = document.querySelector('.categorias1');
+let lista = document.querySelector('.categorias2');
 
 formularioBusqueda.addEventListener('submit', function (e) {
     e.preventDefault();
@@ -20,9 +21,11 @@ fetch('https://dummyjson.com/products/category-list')
     })
     .then(function (data) {
         for (let i = 0; i < data.length; i++) {
-            listaCategorias.innerHTML += `<li><a href="./category.html?categoria=${data[i]}">${data[i]}</a></li>`;        }
+            data_nueva = decodeURIComponent (data[i])
+            lista.innerHTML += `<li><a href="./category.html?categoria=${data_nueva}">${data_nueva} </a></li>`;
+        }
     })
-                
+
     .catch(function (error) {
         console.log("Error al traer las categorías", error);
     });
@@ -49,19 +52,19 @@ fetch('https://dummyjson.com/products/category/' + categoria1)
         let producto = data.products
         contenido = ""
         for (let i = 0; i < producto.length; i++) {
-            contenido += `<article class="producto">
-            <h1 class= "texto12"> ${producto[i].title} </h1>
-            <img class= "barato3" src="${producto[i].images[0]}"/>
-            <p class = "texto12"> ${producto[i].description}<   /p>
-            <h3 class= "texto12"> Precio: $ ${producto[i].price} </h3>
-            <p class = "texto12">  Rating: ${producto[i].rating} </p>
-            <p  class= "texto12"> Categoria: ${producto[i].category} </p>
-            <p  class= "texto12"> Stock: ${producto[i].stock} unidades disponibles </p>
-            <p  class= "texto12"> Marca: ${producto[i].brand} </p>
-            <a class= "detalle" href="./product.html?id=${producto[i].id}"> Ver detalles </a>
-
-            
+            contenido += `
+            <article class="producto">
+                <h1 class= "texto12"> ${producto[i].title} </h1>
+                <img class= "barato3" src="${producto[i].images[0]}"/>
+                <p class = "texto12"> ${producto[i].description}<   /p>
+                <h3 class= "texto12"> Precio: $ ${producto[i].price} </h3>
+                <p class = "texto12">  Rating: ${producto[i].rating} </p>
+                <p  class= "texto12"> Categoria: ${producto[i].category} </p>
+                <p  class= "texto12"> Stock: ${producto[i].stock} unidades disponibles </p>
+                <p  class= "texto12"> Marca: ${producto[i].brand} </p>
+                <a class= "detalle" href="./product.html?id=${producto[i].id}"> Ver detalles </a>
             </article>`
+
         }
        productos.innerHTML = contenido;
 

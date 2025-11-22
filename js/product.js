@@ -3,10 +3,28 @@ let productContainer = document.querySelector('#producto-container');
 let reviewsContainer = document.querySelector('#container-reseña');
 let loading = document.querySelector('#cargando-mensaje');
 let errorMsg = document.querySelector('#error-mensaje');
+let lista = document.querySelector('.categorias2');
+
+
 
 let query = location.search;
 let queryObj = new URLSearchParams(query);
 let productId = queryObj.get("id");
+
+fetch('https://dummyjson.com/products/category-list')
+    .then(function (respuesta) {
+        return respuesta.json();
+    })
+    .then(function (data) {
+        for (let i = 0; i < data.length; i++) {
+            data_nueva = decodeURIComponent (data[i])
+            lista.innerHTML += `<li><a href="./category.html?categoria=${data_nueva}">${data_nueva} </a></li>`;
+        }
+    })
+
+    .catch(function (error) {
+        console.log("Error al traer las categorías", error);
+    });
 
 
 fetch(`https://dummyjson.com/products/${productId}`)

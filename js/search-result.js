@@ -5,6 +5,7 @@ let resultado = document.querySelector(".resultados-busqueda");
 let cantidad = document.querySelector(".Metaa");
 let formularioBusqueda = document.querySelector('#forma');
 let campoBusqueda = document.querySelector('.forma1');
+let lista = document.querySelector('.categorias2');
 
 cantidad.innerText = `Se han encontrado los siguientes resultados para: "${busqueda}"`;
 
@@ -15,6 +16,25 @@ formularioBusqueda.addEventListener('submit', function (e) {
     }
     this.submit();
     });
+
+
+fetch('https://dummyjson.com/products/category-list')
+    .then(function (respuesta) {
+        return respuesta.json();
+    })
+    .then(function (data) {
+        for (let i = 0; i < data.length; i++) {
+            let data_nueva = decodeURIComponent (data[i])
+            lista.innerHTML += `<li><a href="./category.html?categoria=${data_nueva}">${data_nueva} </a></li>`;
+        }
+    })
+
+    .catch(function (error) {
+        console.log("Error al traer las categorías", error);
+    });
+
+    
+
 
 fetch(`https://dummyjson.com/products/search?q=${busqueda}`)
 .then(function (response) {

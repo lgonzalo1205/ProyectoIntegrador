@@ -15,13 +15,14 @@ formularioBusqueda.addEventListener('submit', function (e) {
 
 
 
-fetch('https://dummyjson.com/products/categories')
+fetch('https://dummyjson.com/products/category-list')
     .then(function (respuesta) {
         return respuesta.json();
     })
     .then(function (data) {
         for (let i = 0; i < data.length; i++) {
-            lista.innerHTML += `<li><a href="./category.html?name=${data[i].name}">${data[i].name} </a></li>`;
+            data_nueva = decodeURIComponent (data[i])
+            lista.innerHTML += `<li><a href="./category.html?categoria=${data_nueva}">${data_nueva} </a></li>`;
         }
     })
 
@@ -58,9 +59,7 @@ fetch('https://dummyjson.com/products/category/smartphones?limit=10')
     })
     .catch(function (error) {
         console.log("Error al traer los smartphones:", error);
-        if (document.querySelector('.cuadro1')) {
-            document.querySelector('.cuadro1').innerHTML = '<p>Error al cargar productos (smartphones): ' + error.message + '</p>';
-        }
+        
     });
 
 
@@ -86,10 +85,9 @@ fetch('https://dummyjson.com/products/category/sunglasses?limit=10')
     })
     .catch(function (error) {
         console.log("Error al traer las fragancias:", error);
-        if (document.querySelector('.cuadro2')) {
-            document.querySelector('.cuadro2').innerHTML = '<p>Error al cargar productos (fragancias): ' + error.message + '</p>';
+        
         }
-    });
+    );
 
 
 
